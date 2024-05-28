@@ -2,7 +2,7 @@
 
 ## Configuracion BD
 
-Para configurar la base de datos para la resolucion de este ejercicio nos dirigimos a un (sandbox en blanco)[https://sandbox.neo4j.com/] provisto por Neo4j.
+Para configurar la base de datos para la resolucion de este ejercicio nos dirigimos a un [sandbox en blanco](https://sandbox.neo4j.com/) provisto por Neo4j.
 
 ### Generacion BD
 
