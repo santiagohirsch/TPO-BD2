@@ -73,7 +73,7 @@ Para importar el csv `bataxi.csv` y el script `exercise3.py` al contenedor se ej
     ./scripts/exercise3/exercise3_setup.sh
 ```
 
-3. Nos dirigimos al directiorio en donde se encuentran los [datasets y scripts](#importación-de-datasets-y-scripts) (desde el Shell bash del contenedor):
+3. Nos dirigimos al directorio en donde se encuentran los [datasets y scripts](#importación-de-datasets-y-scripts) (desde el Shell bash del contenedor):
 
 ```sh
     cd ..

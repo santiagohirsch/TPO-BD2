@@ -88,7 +88,7 @@ Para responder esta consulta se ejecuta el siguiente comando en la interfaz de N
 Para responder esta consulta se ejecuta el siguiente comando en la interfaz de Neo4j:
 
 ```sh
-    match (p:Product) {productName: "Queso Cabrales"}
+    match (p:Product {productName: "Queso Cabrales"})
     return p.unitPrice as QuesoCabralesPrice
 ```
 
