@@ -23,8 +23,17 @@ Para utilizar Redis se deben seguir los siguientes pasos:
     docker exec -it Myredis bash
 ```
 
-5. Para apagar el contenedor con: docker stop Myredis
-6. Para iniciarla nuevamente: docker start Myredis
+5. Para apagar el contenedor con: 
+
+```sh
+    docker stop Myredis
+```
+
+6. Para iniciarla nuevamente: 
+
+```sh
+    docker start Myredis
+```
 
 Una vez que se levanta el Shell bash dentro del contenedor se debe instalar `Python`. Para lograr esto se deben seguir los siguientes pasos:
 
@@ -43,37 +52,42 @@ Una vez que se levanta el Shell bash dentro del contenedor se debe instalar `Pyt
 3. Instalar `redis`:
 
 ```sh
-    apt-get install python3-redis
+    apt-get install -y python3-redis
 ```
 
 ## Resolución
 
 ### Importación de datasets y scripts
 
-Para importar el csv `bataxi.csv` y el script `exercise3.py` al contenedor se ejecutaron los siguientes comandos (una vez ya creada la [conexion al contenedor](#instalación-y-conexion) y desde una terminal local):
+Para importar el csv `bataxi.csv` y el script `exercise3.py` al contenedor se ejecuta el script `exercise3_setup.sh` que se encuentra dentro del directorio `scripts/exercise3` (una vez ya creada la [conexion al contenedor](#instalación-y-conexion) y desde una terminal local):
+
+1. Le otorgamos permisos de ejecución al script:
 
 ```sh
-    docker cp ./data/bataxi.csv Myredis:/bataxi.csv
-    docker cp ./scripts/exercise3/exercise3.py Myredis:exercise3.py
+    chmod u+x ./scripts/exercise3/exercise3_setup.sh
 ```
 
-### Items a - d
+2. Ejecutamos el script
 
-Para la resolucion de los items a - d, se ejecuta el script `exercise3` (previamente [importado al contenedor](#instalación-y-conexion)):
+```sh
+    ./scripts/exercise3/exercise3_setup.sh
+```
 
-1. Nos dirigimos al directiorio en donde se encuentran los [datasets y scripts](#importación-de-datasets-y-scripts):
+3. Nos dirigimos al directiorio en donde se encuentran los [datasets y scripts](#importación-de-datasets-y-scripts) (desde el Shell bash del contenedor):
 
 ```sh
     cd ..
 ```
 
-2. Le otorgamos permisos de ejecución al script:
+4. Le otorgamos permisos de ejecución al script:
 
 ```sh
     chmod u+x ./exercise3.py
 ```
 
-3. Ejecutamos el script:
+### Items a - d
+
+Para la resolucion de los items a - d, se ejecuta el script `exercise3` (previamente [importado al contenedor](#instalación-y-conexion)):
 
 ```sh
     ./exercise3.py
